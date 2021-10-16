@@ -18,7 +18,3 @@ def test_clean():
     assert clean("https://www.bbc.co.uk/test/6544") == "https://www.bbc.co.uk/test/6544"
     assert clean("https://www.bbc.co.uk/test/6544/") == "https://www.bbc.co.uk/test/6544"
     assert clean("www.bbc.co.uk/test/6544/#") == "http://www.bbc.co.uk/test/6544"
-
-
-def test_dummy():
-    assert True
