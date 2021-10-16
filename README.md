@@ -23,3 +23,27 @@ Use this opportunity to showcase your approach to engineering; this is at least 
 - How will you test your solution - unit tests, etc;
 - Think about how your solution could be reused - how it is invoked, how it is configured, and how it returns its results;
 - Manage expensive resources and make best use of them - for instance, how will you create/maintain/feed gevent workers, manage how many are active at any one time, etc. 
+
+# Assumptions and tackling the problem
+
+- I assume that the website I have to crawl contains a href tags.
+- I don't render Js sites.
+- I don't manage Auth yet.
+- Nothing is stored in db yet, might use redis or another dbms like postgres.
+
+# TODO
+
+- Args parse to run it
+- db management
+- better management of gevent pool (at the momment I create batches of 50 worker when I try to parse link I found in one page)
+- use json file as input or at least a list of websites
+- dockerfile + docker-compose for convenience
+- so much more 
+
+
+# How to run 
+
+Works with python 3.9, you want to create a virtual-env using conda and the .yml provide or casually using the requirements.txt
+At the moment you have to modify the code of main.py
+
+

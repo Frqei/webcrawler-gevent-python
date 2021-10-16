@@ -65,11 +65,4 @@ class Spider(object):
                     self.to_visit.append((url, current_depth + 1))
 
 
-if __name__ == "__main__":
-    spider = Spider()
-    start = time.time()
-    spider.crawl("https://bbc.co.uk/", max_depth=3)
 
-    end = time.time()
-
-    print(f"Crawled {len(spider.visited)} pages in {end - start} seconds")
