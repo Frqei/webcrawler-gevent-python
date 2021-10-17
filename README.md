@@ -43,7 +43,7 @@ Use this opportunity to showcase your approach to engineering; this is at least 
 
 # How to run 
 
-Works with python 3.9, you want to create a virtual-env using conda and the .yml provide or casually using the requirements.txt
+Works with python 3.9, you want to create a virtual-env using conda and the .yml provided or casually using the requirements.txt
 At the moment you have to modify the code of main.py
 
 
