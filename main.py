@@ -1,6 +1,6 @@
 import time
 
-from spider import Spider
+from utils.spider import Spider
 
 if __name__ == "__main__":
     spider = Spider()

@@ -30,18 +30,17 @@ class Spider(object):
         current_depth = 0
         self.to_visit.append((target_url, current_depth))  # put target_url to to_visit list
         jobs = list()
-        cpt_d = 0
         while current_depth < max_depth:
-            js = 0
+            nb_jobs = 0
             while len(self.to_visit) > 0:
                 (url, current_depth) = self.to_visit.pop(0)  # get next url
                 if url not in self.visited:
                     jobs.append(gevent.spawn(self.visit, url, max_depth, current_depth))
-                    js += 1
-                    if js == 50:
+                    nb_jobs += 1
+                    if nb_jobs == 50:
                         gevent.joinall(jobs)
                         jobs = list()
-                        js = 0
+                        nb_jobs = 0
             if len(jobs) > 0:
                 gevent.joinall(jobs)
         self.display_connections()
